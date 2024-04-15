@@ -1,0 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image:  url("/assets/images/love\ wallpaper.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh; /*Garante que o elemento tenha pelo menos  altura total da viewport*/
+    position: relative; /*Faz com que o elemento pai mantenha os elementos filhos em um "contexto". Podendo ser utilizado "top" "left" "right" "bottom"*/
+    
+}
+
+
