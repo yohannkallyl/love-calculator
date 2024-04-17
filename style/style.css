@@ -27,8 +27,13 @@ body{
     
 }
 
+h2{
+    margin-top: 15px;
+}
+
 p{
     font-weight: 300;
+    font-size: 1.2rem;
 }
 
 @keyframes fadeIn{
@@ -60,7 +65,8 @@ p{
     transform: translate(-50%, -50%); /*Centralizar*/
 
     opacity: 0;
-    animation: fadeIn 1s ease forwards; /*animação*/
+    animation: fadeIn 1.5s ease forwards; /*animação*/
+    
 
     
    
@@ -87,20 +93,21 @@ p{
 }
 
 .content-card input{
-    width: 400px;
+    max-width: 90%; /* Defina uma largura máxima para os inputs */
+    width: 100%; /* Garanta que os inputs ocupem toda a largura disponível */
     margin-top: 10px;
     padding: 5px;
-    
-    
     font-size: 1.5rem;
     font-family: "Love Ya Like A Sister", serif;
-    
     text-align: center;
     outline: none;
-    border: none;
-
     border-radius: 8px;
-    
+}
+
+@media screen and (max-width: 600px) {
+    .content-card {
+        width: 90%; 
+    }
 }
 
 
