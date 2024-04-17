@@ -14,23 +14,25 @@ window.onload = function(){
 }
 
 function calculoAmor(){
-    let seuNome = document.getElementById("seu-nome").value
-    let nomeCrush = document.getElementById("nome-crush").value
+    let seuNome = document.getElementById("seu-nome")
+    let nomeCrush = document.getElementById("nome-crush")
     let resultadoMensagem = document.getElementById("resultado-mensagem")
     let resultadoPorcentagemElement = document.getElementById("resultado-porcentagem")
     let resultadoPorcentagem = resultadoPorcentagemElement.value
     
 
     resultadoMensagem.innerHTML = "" //resetar
+
     
     
-    if(seuNome.length === 0 || nomeCrush.length === 0){
+    
+    if(seuNome.value.length === 0 || nomeCrush.value.length === 0){
         resultadoMensagem.innerHTML = "Verifique os campos e tente novamente!"
-    } else if(seuNome === nomeCrush){
+    } else if(seuNome.value === nomeCrush.value){
         resultadoMensagem.innerHTML = "Epa, amigão. Quer namorar contigo mesmo? KKKKKK"
     } else{
         let randomNumber = Math.random()
-        resultadoPorcentagem = Math.floor(randomNumber * 100) + 1
+        resultadoPorcentagem = 100
         resultadoPorcentagemElement.innerHTML = `${resultadoPorcentagem}% de chance de dar certo`
 
         if(resultadoPorcentagem <= 49){
@@ -40,8 +42,8 @@ function calculoAmor(){
         } else if(resultadoPorcentagem >= 70 && resultadoPorcentagem <= 99){
             resultadoMensagem.innerHTML = "Chance boa demais, hein. Continua assim e vai administrando 👀"
         } else if(resultadoPorcentagem === 100){
-            document.getElementById("seu-nome").style.borderColor = "#d000ff"
-            document.getElementById("nome-crush").style.borderColor = "#d000ff"
+            seuNome.style.border = "solid 1px #d000ff"
+            nomeCrush.style.border = "solid 1px #d000ff"
             resultadoMensagem.innerHTML = "Cara, vocês sinceramente nasceram um para o outro ❤️‍🔥"
 
             
