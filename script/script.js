@@ -24,15 +24,22 @@ function calculoAmor(){
     resultadoMensagem.innerHTML = "" //resetar
 
     
-    
+    //todo : RETIRAR MENSAGEM DE PORCENTAGEM APÓS ERROS DE CONDIÇÕES
     
     if(seuNome.value.length === 0 || nomeCrush.value.length === 0){
+        seuNome.style.border = "solid 1px red"
+        nomeCrush.style.border = "solid 1px red"
         resultadoMensagem.innerHTML = "Verifique os campos e tente novamente!"
     } else if(seuNome.value === nomeCrush.value){
+        seuNome.style.border = "solid 1px red"
+        nomeCrush.style.border = "solid 1px red"
         resultadoMensagem.innerHTML = "Epa, amigão. Quer namorar contigo mesmo? KKKKKK"
     } else{
+        seuNome.style.border = "transparent"
+        nomeCrush.style.border = "transparent"
+        
         let randomNumber = Math.random()
-        resultadoPorcentagem = 100
+        resultadoPorcentagem = Math.floor(randomNumber * 100) + 1
         resultadoPorcentagemElement.innerHTML = `${resultadoPorcentagem}% de chance de dar certo`
 
         if(resultadoPorcentagem <= 49){
