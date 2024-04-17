@@ -30,10 +30,12 @@ function calculoAmor(){
         seuNome.style.border = "solid 1px red"
         nomeCrush.style.border = "solid 1px red"
         resultadoMensagem.innerHTML = "Verifique os campos e tente novamente!"
+        resultadoPorcentagem.innerHTML = ""
     } else if(seuNome.value === nomeCrush.value){
         seuNome.style.border = "solid 1px red"
         nomeCrush.style.border = "solid 1px red"
         resultadoMensagem.innerHTML = "Epa, amigão. Quer namorar contigo mesmo? KKKKKK"
+        resultadoPorcentagem.innerHTML = ""
     } else{
         seuNome.style.border = "transparent"
         nomeCrush.style.border = "transparent"
