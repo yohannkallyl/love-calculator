@@ -15,7 +15,7 @@ body{
     color: white;
     
     
-    background-image:  url("/assets/images/love\ wallpaper.jpg");
+    background-image:  url("../assets/images/love\ wallpaper.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
